@@ -1,6 +1,12 @@
 class PostsController < ApplicationController
 
   def index
+    if session[:user_id]
+      redirect_to "/host"
+    end
+  end
+
+  def input
   end
 
   def show
@@ -9,10 +15,7 @@ class PostsController < ApplicationController
   def host
   end
 
-  def input
-  end
-
-  def confirm
+  def edit
   end
 
 end
