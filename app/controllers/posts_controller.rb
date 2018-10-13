@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
 
   def index
-    if session[:user_id]
-      redirect_to "/host"
-    end
+    # if session[:user_id]
+    #   redirect_to "/h"
+    # end
   end
 
   def input
