@@ -1,3 +1,216 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/////////////////////////////// 全体設定
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #b3aeb5;
+}
+
+
+/////////////////////////////// Top
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 80px 0 0 0;
+}
+
+.btn-wrapper a {
+  margin: 10px 0;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.twitter {
+  padding: 15px 40px;
+  background-color: #55acee;
+  cursor: pointer;
+  box-shadow: 0 7px #319FED;
+}
+
+.twitter:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+/////////////////////////////// ヘッダー
+header {
+  height: 65px;
+  width: 100%;
+  background-color: #E13424;
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 10px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 15px 0;
+  display: none;
+}
+
+/////////////////////////////// Example
+.example-wrapper {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.example {
+  float: left;
+  width: 16.6%;
+}
+
+
+/////////////////////////////// Howto
+.howto-wrapper {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.howto {
+  float: left;
+  width: 33%;
+}
+
+.howto-icon {
+  position: relative;
+}
+
+.howto-icon p {
+  position: absolute;
+  top: 44%;
+  width: 100%;
+  color: white;
+}
+
+
+/////////////////////////////// Message
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.message-wrapper a {
+  margin: 10px 0;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/////////////////////////////// フッター
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
