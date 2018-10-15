@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progate</title>
-    <link rel="stylesheet" href="posts.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  </head>
-  <body>
 
-
-    <header>
-      <div class="container">
-        <div class="header-left">
-          <img class="logo" src="./assets/gochisou_logo.png">
-        </div>
-        <div class="menu-icon">
-          <span class="fa fa-bars"></span>
-        </div>
-        <div class="header-right">
-          <a href="#">新規登録</a>
-          <a href="#" class="login">ログイン</a>
-        </div>
-      </div>
-    </header>
-
+    <!-- ログイン前 -->
+    <% if !(session[:user_id]) %>
 
     <div class="top-wrapper">
       <div class="container">
@@ -113,18 +88,36 @@
         <div class="heading">
           <h2>お手伝いとゴチソウでもっと繋がる</h2>
         </div>
-        <a href="/auth/twitter" class="btn twitter"><span class="fa fa-twitter"></span>Twitterログイン</a>
+          <a href="/auth/twitter" class="btn twitter"><span class="fa fa-twitter"></span>Twitterログイン</a>
+      </div>
+    </div>
+    <% end %>
+
+    <!-- ログイン後 -->
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>Twitterでお手伝いを要請！</h1>
+        <div class="btn-wrapper">
+          <a href="/post/input" class="btn twitter"></span>お手伝い頼む</a>
+        </div>
       </div>
     </div>
 
 
-    <footer>
+    <div class="message-wrapper">
       <div class="container">
-        <img src="./assets/gochisou_logo_w.png">
-        <p>© 2018 gochisou</p>
+        <div class="heading">
+          <h2><%= "#{@name}さんの募集一覧" %></h2>
+        </div>
+        <div class="wants-wrapper">
+          <!-- for文でループ -->
+          <% @posts.each do |post| %>
+          <a href="/post/<%= post.id %>">
+            <div class="want-wrapper">
+              <h3><%= post.title %></h3>
+            </div>
+          </a>
+          <% end %>
+        </div>
       </div>
-    </footer>
-
-
-  </body>
-</html>
+    </div>

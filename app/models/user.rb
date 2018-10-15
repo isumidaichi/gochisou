@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
     User.find_or_create_by(provider: provider, uid: uid) do |user|
       user.name = name
+      user.url = "https://twitter.com/#{name}"
       user.image_url = image_url
     end
 

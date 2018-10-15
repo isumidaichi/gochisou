@@ -11,11 +11,36 @@
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <a href="/"><img class="logo" src="./assets/gochisou_logo.png"></a>
+        </div>
+        <div class="menu-icon">
+          <span class="fa fa-bars"></span>
+        </div>
+        <div class="header-right">
+          <% if session[:user_id] %>
+            <a href="#"><img src="<%= @image_url %>"></a>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
     <% if flash[:notice] %>
       <div class="alert alert-success">
         <%= flash[:notice] %>
       </div>
     <% end %>
+
     <%= yield %>
+
+    <footer>
+      <div class="container">
+        <img src="./assets/gochisou_logo_w.png">
+        <p>© 2018 gochisou</p>
+      </div>
+    </footer>
+
   </body>
 </html>

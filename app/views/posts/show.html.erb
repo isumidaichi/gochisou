@@ -1,0 +1,43 @@
+<div class="top-wrapper">
+  <div class="container">
+    <div class="heading">
+      <h2><%= @name %>さんのお願い</h2>
+    </div>
+    <img src="#">
+  </div>
+  <!-- 手伝うボタン -->
+  <div class="btn-wrapper">
+    <a href="post/<%= @post_id%>/join" class="btn twitter"></span>手伝う</a>
+  </div>
+  <!-- シェアボタン -->
+  <div class="btn-wrapper">
+    <a href="/auth/twitter" class="btn twitter"><span class="fa fa-twitter"></span>Twitterでシェアする</a>
+  </div>
+
+</div>
+
+<% if @is_host %>
+<!-- 本人ならば -->
+<!-- 応募一覧 -->
+<div class="message-wrapper">
+  <div class="container">
+    <div class="heading">
+      <h2>応募一覧</h2>
+    </div>
+    <div class="wants-wrapper">
+      <!-- for文でループ -->
+      <% @applies.each do |apply| %>
+      <a href="<%= apply.url %>">
+        <div class="want-wrapper">
+          <h3><%= apply.name %></h3>
+        </div>
+      </a>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<% else %>
+<!-- 応募からの流れ？ -->
+
+<% end %>

@@ -1,0 +1,13 @@
+<div class="top-wrapper">
+  <div class="container">
+
+    <%= form_for @post do |f| %>
+      <h2>お手伝いしてほしいこと</h2>
+      <%= f.text_area :title, class: "input" %>
+      <h2>お手伝い詳細</h2>
+      <%= f.text_area :description, class: "input", size: "10x10" %>
+      <%= f.submit class: "submit btn" %>
+    <% end %>
+
+  </div>
+</div>

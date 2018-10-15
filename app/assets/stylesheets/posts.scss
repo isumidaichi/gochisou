@@ -46,6 +46,58 @@ a {
 }
 
 
+/////////////////////////////// ヘッダー
+header {
+  height: 65px;
+  width: 100%;
+  background-color: #E13424;
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 10px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-right img {
+  vertical-align: middle;
+  border-radius: 100px;
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 15px 0;
+  display: none;
+}
+
+
 /////////////////////////////// Top
 .top-wrapper {
   padding: 180px 0 100px 0;
@@ -99,51 +151,6 @@ a {
   margin-right: 5px;
 }
 
-/////////////////////////////// ヘッダー
-header {
-  height: 65px;
-  width: 100%;
-  background-color: #E13424;
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 10px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-  text-decoration: none;
-}
-
-.header-right a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 15px 0;
-  display: none;
-}
 
 /////////////////////////////// Example
 .example-wrapper {
@@ -159,6 +166,17 @@ header {
   width: 16.6%;
 }
 
+.input {
+  width: 30%;
+  display: block;
+  margin-bottom: 30px;
+  margin: 0 auto;
+}
+
+.submit {
+  display: block;
+  margin-top: 50px;
+}
 
 /////////////////////////////// Howto
 .howto-wrapper {
@@ -199,6 +217,7 @@ header {
   font-size: 15px;
   text-decoration: none;
 }
+
 
 /////////////////////////////// フッター
 footer img {
