@@ -1,17 +1,21 @@
 class PostsController < ApplicationController
 
   def index
-    user = User.find_by(id: session[:user_id])
-    @name = user.name
-    @image_url = user.image_url
+    if session[:user_id]
+      user = User.find_by(id: session[:user_id])
+      @name = user.name
+      @image_url = user.image_url
+    end
 
     @posts = Post.where(host_id: session[:user_id])
   end
 
   def input
-    user = User.find_by(id: session[:user_id])
-    @name = user.name
-    @image_url = user.image_url
+    if session[:user_id]
+      user = User.find_by(id: session[:user_id])
+      @name = user.name
+      @image_url = user.image_url
+    end
 
     @post = Post.new
   end
@@ -34,12 +38,12 @@ class PostsController < ApplicationController
       @is_host = false
     end
 
-
-
   end
 
   def join
-    post_user = PostUser.new(user_id: session[:user_id], post_id: params[:id])
+    if session[:user_id]
+      post_user = PostUser.new(user_id: session[:user_id], post_id: params[:id])
+    end
 
     if @post.save
       redirect_to "/post/#{params[:id]}", notice: "参加表明しました。"

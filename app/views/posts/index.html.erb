@@ -94,6 +94,7 @@
     <% end %>
 
     <!-- ログイン後 -->
+    <% if session[:user_id] %>
     <div class="top-wrapper">
       <div class="container">
         <h1>Twitterでお手伝いを要請！</h1>
@@ -121,3 +122,5 @@
         </div>
       </div>
     </div>
+
+    <% end %>
